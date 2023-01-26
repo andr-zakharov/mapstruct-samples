@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.epmp.demo;
+
+message Person {
+  string firstName = 1;
+  string lastName = 2;
+}
+
+message Order {
+  string id = 1;
+  Person person = 2;
+  repeated string positions = 3;
+  string comment = 4;
+}
+
+message EqualObject {
+  string id = 1;
+  string comment = 2;
+  Person person = 3;
+}
